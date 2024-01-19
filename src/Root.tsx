@@ -54,7 +54,7 @@ const Root = () => {
   }
 
   return (
-    <div className={`${bg} bg-cover bg-center text-red-500 min-h-screen`}>
+    <div className={`${bg} bg-cover bg-center text-white min-h-screen`}>
       <Header />
       <Outlet />
     </div>
