@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import Header from './components/Header';
 import useMediaQuery from './components/shared/hooks/UseMediaQuery';
 import { useEffect, useState } from 'react';
+import Header from './components/layout/Header';
 
 const Root = () => {
   const { pathname } = useLocation();
@@ -69,7 +69,7 @@ const Root = () => {
   }, [pathname, device]);
 
   return (
-    <div className={`${bg} bg-cover bg-center text-white min-h-screen`}>
+    <div className={`${bg} bg-cover bg-center min-w-[280px] min-h-screen`}>
       <Header />
       <Outlet />
     </div>
