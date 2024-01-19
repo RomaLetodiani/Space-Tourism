@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import Root from './Root';
 import Error from './Pages/error';
 import Home from './Pages/home';
@@ -6,27 +6,27 @@ import Destination from './Pages/destination';
 import Crew from './Pages/crew';
 import Technology from './Pages/technology';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: '/space-tourism',
+    path: '/',
     element: <Root />,
     errorElement: <Error />,
     children: [
       {
-        path: '/space-tourism',
+        path: '/',
         element: <Home />,
         index: true,
       },
       {
-        path: '/space-tourism/destination',
+        path: '/destination',
         element: <Destination />,
       },
       {
-        path: '/space-tourism/crew',
+        path: '/crew',
         element: <Crew />,
       },
       {
-        path: '/space-tourism/technology',
+        path: '/technology',
         element: <Technology />,
       },
     ],

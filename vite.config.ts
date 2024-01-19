@@ -4,7 +4,7 @@ import tailwind from 'tailwindcss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/space-tourism',
+  base: '/space-tourism/#/',
   plugins: [react()],
   css: {
     postcss: {

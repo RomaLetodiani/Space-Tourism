@@ -23,8 +23,9 @@ const Root = () => {
   }, [isDesktopMode, isMobileMode]);
 
   useEffect(() => {
+    console.log('pathname', pathname);
     switch (pathname) {
-      case '/space-tourism':
+      case '/':
         if (device === 'desktop') {
           setBg('bg-home-desktop');
         } else if (device === 'mobile') {
@@ -33,7 +34,7 @@ const Root = () => {
           setBg('bg-home-tablet');
         }
         break;
-      case '/space-tourism/destination':
+      case '/destination':
         if (device === 'desktop') {
           setBg('bg-destination-desktop');
         } else if (device === 'mobile') {
@@ -42,7 +43,7 @@ const Root = () => {
           setBg('bg-destination-tablet');
         }
         break;
-      case '/space-tourism/crew':
+      case '/crew':
         if (device === 'desktop') {
           setBg('bg-crew-desktop');
         } else if (device === 'mobile') {
@@ -51,7 +52,7 @@ const Root = () => {
           setBg('bg-crew-tablet');
         }
         break;
-      case '/space-tourism/technology':
+      case '/technology':
         if (device === 'desktop') {
           setBg('bg-technology-desktop');
         } else if (device === 'mobile') {
