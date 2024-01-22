@@ -18,8 +18,10 @@ const DesktopMenu = () => {
           <Link key={item.index} to={item.link}>
             <li
               className={`cursor-pointer tracking-[2.7px] text-sm py-8 ${
-                location.pathname === item.link ? 'border-b-4' : ''
-              } border-t-4 border-t-transparent font-barlowCondensed`}
+                location.pathname === item.link
+                  ? 'border-b-4 hover:border-opacity-100'
+                  : ''
+              } hover:border-b-4 hover:border-opacity-20 border-t-4 border-t-transparent font-barlowCondensed`}
             >
               {isAboveTablet && (
                 <span className="tracking-normal font-bold">{item.index}</span>

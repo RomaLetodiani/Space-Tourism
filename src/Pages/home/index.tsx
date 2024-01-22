@@ -2,7 +2,7 @@ import ExploreButton from './ExploreButton';
 
 const Home = () => {
   return (
-    <div className="max-w-[1440px] h-full mx-auto w-full flex flex-col lg:flex-row justify-between items-center px-[clamp(3rem,5vw,10rem)] py-[clamp(2rem,5vw,10rem)] gap-5 md:gap-20 text-white">
+    <div className="max-w-[1440px] flex-1 h-full mx-auto w-full flex flex-col lg:flex-row justify-around items-center px-[clamp(3rem,5vw,10rem)] py-[clamp(2rem,5vw,10rem)] gap-5 md:gap-10 lg:gap-20 text-white">
       <div className="max-w-md text-center lg:text-left">
         <h5 className="font-barlowCondensed tracking-[1.72px] text-base lg:text-xl ">
           SO, YOU WANT TO TRAVEL TO

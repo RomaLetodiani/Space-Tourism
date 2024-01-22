@@ -21,11 +21,17 @@ const MobileMenu = () => {
         <nav>
           <ul className="flex flex-col gap-6">
             {header.map((item) => (
-              <Link key={item.index} to={item.link}>
+              <Link
+                key={item.index}
+                onClick={() => setIsOpen(false)}
+                to={item.link}
+              >
                 <li
                   className={`cursor-pointer tracking-[2.7px] ${
-                    pathname === item.link ? 'border-r-4' : ''
-                  } font-barlowCondensed text-xs min-[320px]:text-base`}
+                    pathname === item.link
+                      ? 'border-r-4 hover:border-opacity-100'
+                      : ''
+                  } hover:border-opacity-20 hover:border-r-4 font-barlowCondensed text-xs min-[320px]:text-base`}
                   key={item.index}
                 >
                   <span className="tracking-normal pr-3 text-lg font-bold">
