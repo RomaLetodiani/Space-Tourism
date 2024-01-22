@@ -23,7 +23,6 @@ const Root = () => {
   }, [isDesktopMode, isMobileMode]);
 
   useEffect(() => {
-    console.log('pathname', pathname);
     switch (pathname) {
       case '/':
         if (device === 'desktop') {
