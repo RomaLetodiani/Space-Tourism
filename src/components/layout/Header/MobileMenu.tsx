@@ -25,7 +25,7 @@ const MobileMenu = () => {
                 <li
                   className={`cursor-pointer tracking-[2.7px] ${
                     pathname === item.link ? 'border-r-4' : ''
-                  } font-barlowCondensed text-xs min-[300px]:text-base`}
+                  } font-barlowCondensed text-xs min-[320px]:text-base`}
                   key={item.index}
                 >
                   <span className="tracking-normal pr-3 text-lg font-bold">

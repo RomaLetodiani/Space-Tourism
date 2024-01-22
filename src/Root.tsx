@@ -69,7 +69,9 @@ const Root = () => {
   }, [pathname, device]);
 
   return (
-    <div className={`${bg} bg-cover bg-center min-w-[280px] min-h-screen`}>
+    <div
+      className={`${bg} bg-cover flex flex-col lg:justify-between bg-center min-w-[280px] min-h-screen`}
+    >
       <Header />
       <Outlet />
     </div>
