@@ -29,9 +29,9 @@ const MobileMenu = () => {
                 <li
                   className={`cursor-pointer tracking-[2.7px] ${
                     pathname === item.link
-                      ? 'border-r-4 hover:border-opacity-100'
-                      : ''
-                  } hover:border-opacity-20 hover:border-r-4 font-barlowCondensed text-xs min-[320px]:text-base`}
+                      ? 'border-r-white hover:border-opacity-100'
+                      : 'hover:border-opacity-40 hover:border-r-white'
+                  } border-r-4 border-transparent font-barlowCondensed text-xs min-[320px]:text-base`}
                   key={item.index}
                 >
                   <span className="tracking-normal pr-3 text-lg font-bold">

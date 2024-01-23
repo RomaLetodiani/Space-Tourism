@@ -13,9 +13,13 @@ const Destinations = () => {
 
   useEffect(() => {
     fetch();
-    const dataNames = data?.destinations?.map((item) => item.name);
-    setNames(dataNames);
   }, [fetch]);
+
+  useEffect(() => {
+    if (data) {
+      setNames(data.destinations?.map((destination) => destination.name));
+    }
+  }, [data]);
 
   // /space-tourism/assets/image-moon-cigZLv3o.png
   return (
@@ -38,9 +42,10 @@ const Destinations = () => {
             {names?.map((item, index) => (
               <button
                 className={`cursor-pointer pb-3 ${
-                  index == currentDestination &&
-                  'border-b-2 hover:border-opacity-100'
-                } hover:border-b-2 hover:border-opacity-20 font-barlowCondensed tracking-[2.7px] text-xs min-[320px]:text-base`}
+                  index == currentDestination
+                    ? 'border-white hover:border-opacity-100'
+                    : 'border-transparent hover:border-white hover:border-opacity-40'
+                } border-b-2 font-barlowCondensed tracking-[2.7px] text-xs min-[320px]:text-base`}
                 key={index}
                 onClick={() => onClick(index)}
               >
