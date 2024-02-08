@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import useStore from '../../store/UseStore';
 import { destinationImages } from '../../components/shared/consts';
+import { twMerge } from 'tailwind-merge';
 
 const Destinations = () => {
   const { data, fetch } = useStore((state) => state);
@@ -21,7 +22,6 @@ const Destinations = () => {
     }
   }, [data]);
 
-  // /space-tourism/assets/image-moon-cigZLv3o.png
   return (
     <div className="text-white max-w-[1440px] flex-1 flex flex-col h-full w-full mx-auto px-[clamp(3rem,5vw,5rem)] py-[clamp(2rem,4vw,4rem)] gap-5 md:gap-10">
       <h5 className="font-barlowCondensed tracking-[1.72px] text-center md:text-left md:text-xl lg:text-head5">
@@ -41,11 +41,11 @@ const Destinations = () => {
           <div className="flex items-center justify-center lg:justify-normal gap-5 md:gap-10">
             {names?.map((item, index) => (
               <button
-                className={`cursor-pointer pb-3 ${
-                  index == currentDestination
-                    ? 'border-white hover:border-opacity-100'
-                    : 'border-transparent hover:border-white hover:border-opacity-40'
-                } border-b-2 font-barlowCondensed tracking-[2.7px] text-xs min-[320px]:text-base`}
+                className={twMerge(
+                  'cursor-pointer pb-3 border-transparent hover:border-white hover:border-opacity-40 border-b-2 font-barlowCondensed tracking-[2.7px] text-xs min-[320px]:text-base',
+                  index === currentDestination &&
+                    'border-white hover:border-opacity-100'
+                )}
                 key={index}
                 onClick={() => onClick(index)}
               >
