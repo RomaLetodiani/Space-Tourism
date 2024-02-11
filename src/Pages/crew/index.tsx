@@ -28,6 +28,14 @@ const Crew = () => {
         hideLoading(); // Hide loading state
         showError(); // Set error state on failed fetch
       }); // Set error state on failed fetch
+
+    const intervalId = setInterval(() => {
+      setCurrentCrew((prevCrew) => (prevCrew + 1) % crewImages.length);
+    }, 7500);
+
+    return () => {
+      clearInterval(intervalId); // Cleanup on component unmount
+    };
   }, []);
 
   const currentCrewIndex = currentCrew == 0 ? '01' : `0${currentCrew + 1}`;
